@@ -3,13 +3,14 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FiMail, FiLock, FiEye, FiEyeOff, FiX } from "react-icons/fi";
 import { FaGoogle, FaGithub } from "react-icons/fa";
+import { NavLink, useNavigate } from "react-router";
 
 export default function AuthModal({ open = true, onClose }) {
   const [visible, setVisible] = useState(open);
   const [showPwd, setShowPwd] = useState(false);
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
-
+  const navigate = useNavigate();
   useEffect(() => {
     setVisible(open);
   }, [open]);
@@ -212,6 +213,7 @@ export default function AuthModal({ open = true, onClose }) {
             onClick={() => {
               setVisible(false);
               if (onClose) onClose();
+              navigate("/");
             }}
             className="close-btn"
           >
@@ -287,7 +289,7 @@ export default function AuthModal({ open = true, onClose }) {
 
           <div className="auth-footer">
             <div>
-              Don't have an account? <a href="#">Sign Up</a>
+              Don't have an account? <NavLink to="/signup">Sign Up</NavLink>
             </div>
             <div style={{ marginTop: 8 }}>
               <a href="#" style={{ color: "rgba(255,255,255,0.55)" }}>

@@ -1,9 +1,7 @@
-import SignupModal from "../components/SignupModal";
-
 function Quiz() {
   return (
     <div>
-      <SignupModal />
+      <h1>quiz page</h1>
     </div>
   );
 }

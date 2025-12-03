@@ -1,9 +1,7 @@
-import AuthModal from "../components/AuthModal";
-
 function Notice() {
   return (
     <div>
-      <AuthModal />
+      <h3>notice page</h3>
     </div>
   );
 }

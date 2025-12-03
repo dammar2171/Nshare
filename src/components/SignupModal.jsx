@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FiMail, FiLock, FiEye, FiEyeOff, FiX, FiUser } from "react-icons/fi";
 import { FaGoogle, FaGithub } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
 export default function SignupModal({ open = true, onClose }) {
   const [visible, setVisible] = useState(open);
@@ -13,6 +14,8 @@ export default function SignupModal({ open = true, onClose }) {
   const [pwd, setPwd] = useState("");
   const [confirmPwd, setConfirmPwd] = useState("");
   const [accepted, setAccepted] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setVisible(open);
@@ -26,6 +29,7 @@ export default function SignupModal({ open = true, onClose }) {
   position: fixed;
   inset: 0;
   display: flex;
+  overflow:scroll,
   align-items: center;
   justify-content: center;
   z-index: 1080;
@@ -45,14 +49,13 @@ export default function SignupModal({ open = true, onClose }) {
   width: min(620px, 92%);
   max-width: 620px;
   border-radius: 18px;
-  overflow: hidden;
   z-index: 1;
   box-shadow: 0 20px 50px rgba(3,6,14,0.75), 0 6px 24px rgba(59,78,255,0.06);
   background: linear-gradient(180deg, rgba(10,14,24,0.96), rgba(10,14,24,0.92));
   border: 1px solid rgba(255,255,255,0.04);
 }
 .auth-card .top-rim {
-  height: 12px;
+  height: 6px;
   background: linear-gradient(90deg, #5f7cff, #66e6ff);
   box-shadow: 0 6px 30px rgba(96,113,255,0.14);
 }
@@ -62,23 +65,23 @@ export default function SignupModal({ open = true, onClose }) {
 }
 .auth-card h3 {
   text-align: center;
-  margin: 6px 0 8px 0;
+  margin: 0 0 8px 0;
   font-weight: 700;
   color: #7b8cff;
-  font-size: 28px;
+  font-size: 25px;
 }
 .auth-card p.lead {
   text-align: center;
-  margin-bottom: 14px;
+  margin-bottom: 7px;
   color: rgba(255,255,255,0.55);
 }
 .form-field {
   background: rgba(255,255,255,0.02);
   border: 1px solid rgba(255,255,255,0.05);
   border-radius: 10px;
-  padding: 10px 12px;
+  padding: 8px 12px;
   display:flex;
-  gap:10px;
+  gap:7px;
   align-items:center;
   color: #cdd6ee;
 }
@@ -88,13 +91,13 @@ export default function SignupModal({ open = true, onClose }) {
   background: transparent;
   color: #e7ecff;
   width: 100%;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
 }
 .form-label {
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   color: rgba(255,255,255,0.75);
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 .btn-gradient {
   width: 100%;
@@ -122,7 +125,7 @@ export default function SignupModal({ open = true, onClose }) {
 .btn-social {
   flex:1;
   border-radius:10px;
-  padding:10px 12px;
+  padding:8px 12px;
   border:1px solid rgba(255,255,255,0.06);
   background: rgba(255,255,255,0.01);
   color: #dfe9ff;
@@ -134,7 +137,7 @@ export default function SignupModal({ open = true, onClose }) {
 }
 .auth-footer {
   text-align:center;
-  margin-top: 12px;
+  margin-top: 7px;
   color: rgba(255,255,255,0.55);
 }
 .auth-footer a { color:#7ab6ff; font-weight:600; text-decoration:none; }
@@ -208,6 +211,7 @@ export default function SignupModal({ open = true, onClose }) {
             onClick={() => {
               setVisible(false);
               if (onClose) onClose();
+              navigate("/");
             }}
             className="close-btn"
             type="button"
@@ -216,7 +220,7 @@ export default function SignupModal({ open = true, onClose }) {
           </button>
 
           <h3>Create an account</h3>
-          <p className="lead">Sign up to get started</p>
+          <p className="lead fs-6">Sign up to get started</p>
 
           <form onSubmit={handleSignup}>
             <div className="mb-3">
@@ -328,7 +332,7 @@ export default function SignupModal({ open = true, onClose }) {
               />
               <label
                 htmlFor="termsCheckbox"
-                style={{ color: "rgba(255,255,255,0.75)", fontSize: 14 }}
+                style={{ color: "rgba(255,255,255,0.75)", fontSize: 12 }}
               >
                 I agree to the{" "}
                 <a href="#" style={{ color: "#7ab6ff" }}>
@@ -346,7 +350,7 @@ export default function SignupModal({ open = true, onClose }) {
 
           <div className="or-divider">
             <div className="line" />
-            <div style={{ whiteSpace: "nowrap", fontSize: 14 }}>
+            <div style={{ whiteSpace: "nowrap", fontSize: 12 }}>
               Or continue with
             </div>
             <div className="line" />
@@ -371,11 +375,12 @@ export default function SignupModal({ open = true, onClose }) {
             <div>
               Already have an account?{" "}
               <a
-                href="#"
+                href=""
                 onClick={(e) => {
                   e.preventDefault();
                   setVisible(false);
                   if (onClose) onClose();
+                  navigate("/signup");
                 }}
               >
                 Sign In

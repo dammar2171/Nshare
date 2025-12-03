@@ -11,9 +11,10 @@ import {
   FiBox,
   FiBook,
 } from "react-icons/fi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
   useEffect(() => {
     // component-scoped CSS (inject once)
     const css = `:root{--glass-bg: rgba(255,255,255,0.04);--accent-1: #7b61ff;--accent-2: #00e5ff;--text: rgba(255,255,255,0.95)}
@@ -54,16 +55,21 @@ body.light-theme .nav-link{color:#222}
     document.body.classList.toggle("light-theme");
   };
 
+  const handleSignin = () => {
+    navigate("/login");
+  };
+
   return (
     <header className="container py-3">
       <div className="futuristic-header d-flex align-items-center justify-content-between">
         <div className="d-flex align-items-center gap-2">
-          <div className="brand-blob">
+          <div className="brand-blob" onClick={() => navigate("/")}>
             <GiRapidshareArrow style={{ fontSize: "2.5rem", color: "white" }} />
           </div>
 
           <div className="d-none d-md-block">
             <div
+              onClick={() => navigate("/")}
               className="h6 mb-0"
               style={{ color: "var(--text)", fontWeight: 700 }}
             >
@@ -161,6 +167,7 @@ body.light-theme .nav-link{color:#222}
           </button>
 
           <button
+            onClick={handleSignin}
             type="button"
             className="btn user-btn d-flex align-items-center gap-2"
             aria-expanded="false"
