@@ -1,0 +1,140 @@
+/* ===========================
+   SigninSection — Futuristic
+   =========================== */
+
+.signin-section {
+  background: linear-gradient(180deg, rgba(10,14,24,0.96), rgba(10,14,24,0.92));
+  border-top: 1px solid rgba(255,255,255,0.04);
+  color: #e7eeff;
+  padding: 64px 0;
+}
+
+/* container inside section */
+.signin-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 18px;
+}
+
+.card-signin{
+  
+  width: 800px;
+  padding: 4rem 4rem;
+  border: 1px solid #06b6d4 ;
+  border-radius: 1rem;
+  margin: 0 auto;
+}
+
+/* headline */
+.signin-container h1 {
+  color: #7b8cff;
+  font-size: 2.25rem;
+  line-height: 1.06;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+/* subtext */
+.signin-container p {
+  color: rgba(255,255,255,0.72);
+  font-size: 1.05rem;
+  margin: 0 0 22px;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* button group wrapper */
+.btn-group {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+/* primary gradient CTA */
+.btn-cta {
+  background: linear-gradient(90deg,#5f7cff 0%, #63d6ff 100%);
+  color: #f9f9fb;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0 10px 28px rgba(82,106,255,0.28);
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, opacity .12s;
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+  transform: translateY(-3px);
+  opacity: 0.98;
+  box-shadow: 0 14px 36px rgba(82,106,255,0.36);
+}
+
+/* secondary ghost signin button */
+.btn-ghost {
+  border-color: rgb(96, 165, 250);
+  color: rgb(37, 99, 235);
+  background-color: transparent;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .12s ease, transform .12s ease;
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus {
+  background: white;
+  transform: translateY(-2px);
+}
+
+/* small screen: stack buttons vertically */
+@media (max-width: 576px) {
+  .signin-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .signin-container p {
+    font-size: 0.98rem;
+    padding: 0 6px;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .btn-group .btn-cta,
+  .btn-group .btn-ghost {
+    width: 100%;
+  }
+}
+
+/* medium screens: slightly reduce headline */
+@media (max-width: 992px) {
+  .signin-container h1 {
+    font-size: 1.9rem;
+  }
+}
+
+/* focus outline for keyboard users */
+.btn-cta:focus,
+.btn-ghost:focus {
+  outline: 3px solid rgba(99,120,255,0.16);
+  outline-offset: 4px;
+}
+
+/* Utility: subtle top & bottom padding tweak */
+@media (min-width: 1200px) {
+  .signin-section { padding: 80px 0; }
+}

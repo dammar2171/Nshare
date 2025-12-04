@@ -60,7 +60,7 @@ body.light-theme .nav-link{color:#222}
   };
 
   return (
-    <header className="container py-3">
+    <header className="container py-3 sticky-top">
       <div className="futuristic-header d-flex align-items-center justify-content-between">
         <div className="d-flex align-items-center gap-2">
           <div className="brand-blob" onClick={() => navigate("/")}>

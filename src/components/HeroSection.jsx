@@ -14,7 +14,7 @@ function HeroSection() {
         <div className="row">
           <div className="col-6">
             <div className="content">
-              <h1>Learn Smarter.</h1>
+              <h1 style={{ color: "white" }}>Learn Smarter.</h1>
               <h1>Grow Faster</h1>
               <p>
                 NShare helps you stay ahead in your entrance exam journey with
@@ -51,7 +51,7 @@ function HeroSection() {
             <div className="rectangle">
               <GrTechnology />
             </div>
-            <div className="image" style={{ fontSize: "3rem" }}>
+            <div className="image " style={{ fontSize: "3rem" }}>
               <GiRapidshareArrow style={{ fontSize: "10rem" }} /> NShare
             </div>
             <div className="circle2">

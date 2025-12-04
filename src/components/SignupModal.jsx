@@ -380,7 +380,7 @@ export default function SignupModal({ open = true, onClose }) {
                   e.preventDefault();
                   setVisible(false);
                   if (onClose) onClose();
-                  navigate("/signup");
+                  navigate("/login");
                 }}
               >
                 Sign In
