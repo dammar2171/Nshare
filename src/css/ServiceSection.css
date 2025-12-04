@@ -30,7 +30,7 @@
   font-size: 1.05rem;
 }
 
-/* Card container: uses flex with gap; wraps on small screens */
+
 .card-container {
   display: flex;
   gap: 22px;
@@ -40,11 +40,10 @@
   padding: 22px 8px 0;
 }
 
-/* Individual card */
 .service-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border: 1px solid rgba(255,255,255,0.04);
-  width: 320px;              /* card width on desktop */
+  width: 320px;          
   min-height: 240px;
   border-radius: 14px;
   padding: 20px;
@@ -55,7 +54,6 @@
   transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
 }
 
-/* Logo slot (replace with icon) */
 .service-card .logo {
   width: 56px;
   height: 56px;
@@ -79,7 +77,6 @@ background: linear-gradient(90deg, #a855f7 , #6366f1 );
   background: linear-gradient(90deg, #22c55e , #118b3e );
 }
 
-/* Heading + desc */
 .service-card h3 {
   margin: 0;
   font-size: 1.12rem;
@@ -94,16 +91,12 @@ background: linear-gradient(90deg, #a855f7 , #6366f1 );
   margin-top: 6px;
   flex-grow: 1;
 }
-
-/* Card footer or action space (if needed) */
 .service-card .card-cta {
   margin-top: 12px;
   display: flex;
   gap: 10px;
   align-items: center;
 }
-
-/* Hover / focus effects */
 .service-card:hover,
 .service-card:focus-within {
   transform: translateY(-8px);
@@ -111,10 +104,9 @@ background: linear-gradient(90deg, #a855f7 , #6366f1 );
   border-color: rgba(123,97,255,0.22);
 }
 
-/* Small screens: stack vertically, full width minus padding */
 @media (max-width: 992px) {
   .service-card {
-    width: calc(50% - 16px); /* two columns on medium screens */
+    width: calc(50% - 16px); 
   }
   .service-section .section-head h1 {
     font-size: 1.9rem;
@@ -127,7 +119,7 @@ background: linear-gradient(90deg, #a855f7 , #6366f1 );
     padding: 12px;
   }
   .service-card {
-    width: 100%; /* single column on small screens */
+    width: 100%; 
     padding: 16px;
     border-radius: 12px;
     min-height: auto;
@@ -143,20 +135,19 @@ background: linear-gradient(90deg, #a855f7 , #6366f1 );
   }
 }
 
-/* Accessibility: focus outline for keyboard users */
+
 .service-card:focus {
   outline: 3px solid rgba(99,120,255,0.18);
   outline-offset: 4px;
 }
 
-/* Utility: align logo + heading horizontally */
+
 .card-top {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* Optional: smaller card variant */
 .service-card.small {
   width: 280px;
   padding: 16px;

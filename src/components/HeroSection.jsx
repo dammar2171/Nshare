@@ -4,7 +4,7 @@ import { SlBadge } from "react-icons/sl";
 import { LuBrain } from "react-icons/lu";
 import { GrTechnology } from "react-icons/gr";
 import { CiTrophy } from "react-icons/ci";
-import { GiRapidshareArrow } from "react-icons/gi";
+import notes from "../assets/notes.png";
 import { GiTriquetra } from "react-icons/gi";
 import "../css/HeroSection.css";
 function HeroSection() {
@@ -12,7 +12,7 @@ function HeroSection() {
     <div className="container-fluid pt-5">
       <div className="container pt-5">
         <div className="row">
-          <div className="col-6">
+          <div className="col-6 content-col">
             <div className="content">
               <h1 style={{ color: "white" }}>Learn Smarter.</h1>
               <h1>Grow Faster</h1>
@@ -22,7 +22,7 @@ function HeroSection() {
               </p>
               <button>Browse Study Material</button>
             </div>
-            <div className="d-flex gap-3 align-items-center stats mt-4">
+            <div className="d-flex gap-3 align-items-center justify-content-md-center stats mt-4">
               <div className="d-flex flex-column mt-4">
                 <p>
                   <FaUserFriends /> <span className="number">63+</span>
@@ -51,8 +51,8 @@ function HeroSection() {
             <div className="rectangle">
               <GrTechnology />
             </div>
-            <div className="image " style={{ fontSize: "3rem" }}>
-              <GiRapidshareArrow style={{ fontSize: "10rem" }} /> NShare
+            <div className="image ">
+              <img src={notes} alt="notes share image" />
             </div>
             <div className="circle2">
               <CiTrophy />

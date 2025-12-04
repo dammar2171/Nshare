@@ -1,6 +1,4 @@
-/* ============================
-   HERO SECTION BACKGROUND (Matches Header)
-============================ */
+
 .container-fluid {
   padding: 70px 0;
   background: linear-gradient(180deg, rgba(10,14,24,0.96), rgba(10,14,24,0.92));
@@ -8,14 +6,12 @@
   color: #e8ecff;
 }
 
-/* ============================
-   LEFT SIDE TEXT
-============================ */
+
 .content h1 {
   font-size: 3rem;
   font-weight: 800;
   line-height: 1.1;
-  color: #7b8cff; /* Futuristic neon bluish */
+  color: #7b8cff; 
 }
 
 .content p {
@@ -43,9 +39,7 @@
   opacity: 0.95;
 }
 
-/* ============================
-   STATS AREA
-============================ */
+
 .stats p {
   margin: 0;
 }
@@ -61,13 +55,11 @@
   color: rgba(255,255,255,0.55);
 }
 
-/* ============================
-   RIGHT SIDE SHAPES
-============================ */
+
 .circle {
   position: absolute;
-  top: 12rem;
-  right: 2rem;
+  top: 13rem;
+  right: 6rem;
   width: 80px;
   height: 80px;
   background: rgba(96,113,255,0.12);
@@ -77,14 +69,15 @@
   place-items: center;
   font-size: 2.5rem;
   color: #b9c4ff;
-  margin-bottom: 30px;
   animation: float 4s ease-in-out infinite;
 }
 
 .circle2 {
   width: 60px;
   height: 60px;
-  margin-left: 4rem;
+  position: absolute;
+  top: 36rem;
+  right: 29rem;
   background: rgba(96,113,255,0.12);
   border: 1px solid rgba(124,139,255,0.22);
   border-radius: 50%;
@@ -107,14 +100,13 @@
   font-size: 2.5rem;
   border-radius: 12px;
   margin-left: 4rem;
-  margin-bottom: 30px;
   animation: float 5s ease-in-out infinite;
 }
 
 .rectangle2 {
   position: absolute;
   top: 33rem;
-  right: 2rem;
+  right: 8rem;
   width: 50px;
   height: 50px;
   background: rgba(99,214,255,0.1);
@@ -127,35 +119,32 @@
   animation: float 5s ease-in-out infinite;
 }
 
-.image {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #cdd7ff;
-  margin: 30px 0;
-  margin-left: 10rem;
+.image img{
+  display: flex;
+  width: 350px;
+  margin:0 auto;
 }
 
-/* Floating animation */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-12px); }
   100% { transform: translateY(0px); }
 }
 
-/* ============================
-   RESPONSIVE BEHAVIOR
-============================ */
 @media (max-width: 992px) {
   .col-6:last-child {
-    display: none !important; /* Hide right side */
+    display: none !important; 
   }
-
+.content-col{
+  width: 100%;
+}
   .content {
-    text-align: left;
+    text-align: center;
   }
 
   .content h1 {
     font-size: 2.4rem;
+    text-align: center;
   }
 
   .content p {
@@ -170,14 +159,13 @@
 @media (max-width: 576px) {
   .content h1 {
     font-size: 2rem;
+    
   }
-
-  .content button {
-    width: 100%;
-  }
-
   .stats {
-    flex-direction: column;
-    gap: 15px;
+    justify-content: center;
   }
+  .content button {
+    width: 80%;
+  }
+
 }

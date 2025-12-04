@@ -1,4 +1,3 @@
-// src/components/AuthModal.jsx
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FiMail, FiLock, FiEye, FiEyeOff, FiX } from "react-icons/fi";
@@ -15,7 +14,7 @@ export default function AuthModal({ open = true, onClose }) {
     setVisible(open);
   }, [open]);
 
-  // Inject component-scoped CSS to mimic screenshot style
+  
   useEffect(() => {
     const css = `
 /* base & fonts */

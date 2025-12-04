@@ -8,6 +8,9 @@ import Notice from "./pages/Notice";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
+import BottomFooter from "./components/BottomFooter";
 function App() {
   return (
     <Router>
@@ -20,6 +23,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
+      <BackToTop />
+      <Footer />
+      <BottomFooter />
     </Router>
   );
 }

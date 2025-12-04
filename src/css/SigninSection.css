@@ -1,7 +1,3 @@
-/* ===========================
-   SigninSection — Futuristic
-   =========================== */
-
 .signin-section {
   background: linear-gradient(180deg, rgba(10,14,24,0.96), rgba(10,14,24,0.92));
   border-top: 1px solid rgba(255,255,255,0.04);
@@ -9,7 +5,6 @@
   padding: 64px 0;
 }
 
-/* container inside section */
 .signin-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -21,12 +16,12 @@
   
   width: 800px;
   padding: 4rem 4rem;
-  border: 1px solid #06b6d4 ;
+  background-color: #06b5d406;
   border-radius: 1rem;
   margin: 0 auto;
 }
 
-/* headline */
+
 .signin-container h1 {
   color: #7b8cff;
   font-size: 2.25rem;
@@ -35,7 +30,7 @@
   margin: 0 0 12px;
 }
 
-/* subtext */
+
 .signin-container p {
   color: rgba(255,255,255,0.72);
   font-size: 1.05rem;
@@ -45,7 +40,7 @@
   margin-right: auto;
 }
 
-/* button group wrapper */
+
 .btn-group {
   display: inline-flex;
   gap: 12px;
@@ -55,7 +50,7 @@
   flex-wrap: wrap;
 }
 
-/* primary gradient CTA */
+
 .btn-cta {
   background: linear-gradient(90deg,#5f7cff 0%, #63d6ff 100%);
   color: #f9f9fb;
@@ -76,7 +71,7 @@
   box-shadow: 0 14px 36px rgba(82,106,255,0.36);
 }
 
-/* secondary ghost signin button */
+
 .btn-ghost {
   border-color: rgb(96, 165, 250);
   color: rgb(37, 99, 235);
@@ -95,8 +90,15 @@
   transform: translateY(-2px);
 }
 
-/* small screen: stack buttons vertically */
+
 @media (max-width: 576px) {
+  .card-signin{
+    width: 390px;
+    padding: 4rem 4rem;
+    background-color: #06b5d406;
+    border-radius: 1rem;
+    margin: 0 auto;
+  }
   .signin-container h1 {
     font-size: 1.6rem;
   }
@@ -120,21 +122,21 @@
   }
 }
 
-/* medium screens: slightly reduce headline */
+
 @media (max-width: 992px) {
   .signin-container h1 {
     font-size: 1.9rem;
   }
 }
 
-/* focus outline for keyboard users */
+
 .btn-cta:focus,
 .btn-ghost:focus {
   outline: 3px solid rgba(99,120,255,0.16);
   outline-offset: 4px;
 }
 
-/* Utility: subtle top & bottom padding tweak */
+
 @media (min-width: 1200px) {
   .signin-section { padding: 80px 0; }
 }

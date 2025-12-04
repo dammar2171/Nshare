@@ -21,7 +21,6 @@ export default function SignupModal({ open = true, onClose }) {
     setVisible(open);
   }, [open]);
 
-  // Inject component-scoped CSS (keeps look identical to sign-in)
   useEffect(() => {
     const css = `
 /* Signup modal styles - matches Sign In modal */

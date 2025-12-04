@@ -16,7 +16,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 export default function Header() {
   const navigate = useNavigate();
   useEffect(() => {
-    // component-scoped CSS (inject once)
+  
     const css = `:root{--glass-bg: rgba(255,255,255,0.04);--accent-1: #7b61ff;--accent-2: #00e5ff;--text: rgba(255,255,255,0.95)}
 .futuristic-header{position:relative;padding:0.65rem 1rem;backdrop-filter:blur(6px) saturate(1.1);-webkit-backdrop-filter:blur(6px) saturate(1.1);border-radius:12px;border:1px solid rgba(255,255,255,0.04);background:linear-gradient(135deg,rgba(123,97,255,0.08),rgba(0,229,255,0.04));box-shadow:0 6px 30px rgba(0,0,0,0.6),0 0 18px rgba(123,97,255,0.06) inset}
 .brand-blob{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:10px;margin-right:.6rem;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));box-shadow:0 6px 18px rgba(123,97,255,0.22),0 0 18px rgba(0,229,255,0.08)}
