@@ -9,7 +9,7 @@ import { GiTriquetra } from "react-icons/gi";
 import "../css/HeroSection.css";
 function HeroSection() {
   return (
-    <div className="container-fluid pt-5">
+    <div className="container-fluid hero-section pt-5">
       <div className="container pt-5">
         <div className="row">
           <div className="col-6 content-col">

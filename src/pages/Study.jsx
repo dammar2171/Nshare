@@ -1,7 +1,13 @@
+import PaginationSection from "../components/StudyMaterial/PaginationSection";
+import StudyCardContainer from "../components/StudyMaterial/StudyCardContainer";
+import TopSection from "../components/StudyMaterial/TopSection";
+
 const Study = () => {
   return (
     <>
-      <h1>hello study page</h1>
+      <TopSection />
+      <StudyCardContainer />
+      <PaginationSection />
     </>
   );
 };

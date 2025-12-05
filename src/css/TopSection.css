@@ -1,0 +1,231 @@
+/* TopSection — Futuristic Theme (dark + neon accent) */
+
+/* theme vars */
+:root{
+  --bg-1: rgba(10,14,24,0.96);
+  --bg-2: rgba(10,14,24,0.92);
+  --muted: rgba(255,255,255,0.72);
+  --muted-2: rgba(255,255,255,0.55);
+  --accent-1: #5f7cff;
+  --accent-2: #63d6ff;
+  --glass-border: rgba(255,255,255,0.04);
+}
+
+/* section background (matches header/hero) */
+section.container-fluid {
+  background: linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  border-top: 1px solid var(--glass-border);
+  color: #e7eeff;
+  padding: 36px 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* main inner wrapper */
+.top-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+/* back button */
+.top-section-content > button {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .12s ease, background .12s ease;
+}
+.top-section-content > button:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.02);
+}
+
+/* heading block */
+.top-section-content h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
+  margin: 0;
+  color: var(--accent-1);
+  font-weight: 800;
+}
+.top-section-content h1 svg {
+  color: var(--accent-2);
+  font-size: 1.6rem;
+}
+
+/* subtitle / description */
+.top-section-content p {
+  margin: 6px 0 0 0;
+  color: var(--muted-2);
+  max-width: 720px;
+  font-size: 1rem;
+}
+
+/* search area */
+.search-area {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+/* search input */
+.search-area form {
+  flex: 1 1 520px;
+  min-width: 220px;
+}
+.search-area input[type="search"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  color: #eaf0ff;
+  font-size: 0.98rem;
+  outline: none;
+  transition: box-shadow .12s ease, border-color .12s ease;
+}
+.search-area input[type="search"]::placeholder {
+  color: rgba(226,237,255,0.5);
+}
+
+/* focus */
+.search-area input[type="search"]:focus {
+  border-color: var(--accent-1);
+  box-shadow: 0 8px 28px rgba(95,124,255,0.08);
+  background: rgba(255,255,255,0.03);
+}
+.search-area p{
+  margin-bottom: 0 !important;
+}
+/* filter button */
+.filterBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: linear-gradient(90deg,var(--accent-1),var(--accent-2));
+  color: #061028;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+  white-space: nowrap;
+}
+.filterBtn svg { font-size: 1.1rem; }
+.filterBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 38px rgba(99,120,255,0.12);
+}
+
+/* collapse card body styling (Bootstrap .card) */
+.collapse .card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: var(--muted);
+  margin-top: 12px;
+  border-radius: 12px;
+}
+
+/* ensure the card body is slightly padded and readable */
+.collapse .card-body {
+  padding: 14px;
+}
+
+/* small tweaks to icon size in heading */
+.top-section-content h1 svg.vsc-icon {
+  font-size: 1.3rem;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Medium devices (tablets): stack the heading and back button vertically,
+   make search area fill horizontally, and ensure nice spacing */
+@media (max-width: 992px) {
+  .top-section-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .top-section-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .search-area {
+    margin-top: 12px;
+  }
+
+  /* make filter button smaller and inline with input on narrow tablets */
+  .filterBtn {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 576px) {
+  section.container-fluid { padding: 22px 0; }
+
+  .top-section-content {
+    gap: 8px;
+  }
+
+  .top-section-content > button {
+    padding: 7px 10px;
+    font-size: 0.95rem;
+  }
+
+  .top-section-content h1 {
+    font-size: 1.25rem;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .top-section-content p {
+    font-size: 0.95rem;
+    margin-top: 6px;
+  }
+
+  /* search area stacks: input full width, filter button moves below */
+  .search-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-area form {
+     order: 1;
+    flex: 1 1 10px;
+    min-width: 220px;
+}
+  .search-area .filterBtn { order: 2; width: 100%; justify-content: center; padding: 10px; }
+
+  /* collapse card keeps full width */
+  .collapse .card { width: 100%; }
+}
+
+/* Accessibility: focus style for keyboard users */
+.filterBtn:focus,
+.search-area input[type="search"]:focus,
+.top-section-content > button:focus {
+  outline: 3px solid rgba(99,120,255,0.14);
+  outline-offset: 4px;
+}
+
+/* Utilities (optional): allow smaller hero on very large screens */
+@media (min-width: 1400px) {
+  section.container-fluid { padding: 48px 0; }
+}

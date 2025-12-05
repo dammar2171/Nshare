@@ -16,7 +16,7 @@ import { MdOutlineLibraryBooks } from "react-icons/md";
 import { FiUser, FiHome, FiBox, FiBook } from "react-icons/fi";
 function Footer() {
   return (
-    <footer className="container-fluid">
+    <footer className="container-fluid footer-container">
       <div className="container">
         <div className="row footer-row">
           <div className="col-3">
