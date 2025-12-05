@@ -1,8 +1,12 @@
+import McqCardContainer from "../components/Mcq/McqCardContainer";
+import TopSectionQuiz from "../components/Mcq/TopSectionQuiz";
+
 function Quiz() {
   return (
-    <div>
-      <h1>quiz page</h1>
-    </div>
+    <>
+      <TopSectionQuiz />
+      <McqCardContainer />
+    </>
   );
 }
 

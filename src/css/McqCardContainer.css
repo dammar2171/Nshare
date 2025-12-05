@@ -1,0 +1,200 @@
+/* macq card container  css*/
+.mcqCard-fluid{
+  padding: 20px 0;
+  background: linear-gradient(180deg, rgba(10,14,24,0.96), rgba(10,14,24,0.92));
+  border-top: 1px solid rgba(255,255,255,0.04);
+  color: #e8ecff;
+}
+
+/* css for mcqCard */
+/* ===============================
+   THEME VARIABLES (YOURS)
+================================*/
+:root {
+  --bg:linear-gradient(180deg, rgba(10,14,24,0.96), rgba(10,14,24,0.92));
+  --card-bg: #1f2937;
+  --muted: rgba(20, 2, 2, 0.75);
+  --muted-2: rgba(255,255,255,0.48);
+  --accent-1: #5f7cff;
+  --accent-2: #63d6ff;
+  --pill-bg: rgba(123,97,255,0.12);
+  --chip-bg: rgba(255,255,255,0.02);
+}
+
+/* ===============================
+   WRAPPER GRID
+================================*/
+.quizcard-wrapper {
+  padding: 24px;
+  background: var(--bg);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* ===============================
+   CARD STRUCTURE
+================================*/
+.quiz-card {
+  background: var(--card-bg);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  box-shadow: 0 8px 35px rgba(0,0,0,0.55);
+  transition: 0.18s ease;
+}
+
+.quiz-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.7);
+}
+
+/* ===============================
+   TOP SECTION (BADGES + IMAGE)
+================================*/
+.quizCard-top {
+  position: relative;
+  height: 160px;
+  background: #0e1422;
+}
+
+.quizCard-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Category pill - left top */
+.quizCard-top > span:first-child {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 8px 12px;
+  background: var(--pill-bg);
+  color: black;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Total questions pill - right top */
+.quizCard-top > span:nth-child(2) {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 8px 12px;
+  background: var(--pill-bg);
+  color: black;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ===============================
+   BOTTOM (AUTHOR)
+================================*/
+.quizCard-bottom {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.quizCard-bottom p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+/* Author Icon Box */
+.quizCard-bottom p span {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 6px 14px rgba(99,120,255,0.20);
+}
+
+/* ===============================
+   FOOTER (DESCRIPTION)
+================================*/
+.quizCard-footer {
+  padding: 14px 16px 20px;
+  color: var(--muted-2);
+  font-size: 0.95rem;
+  display: flex;
+  gap: 14px;
+  margin-top: auto;
+}
+
+/* Optional footer chip */
+.quizCard-footer .tag {
+  background: var(--chip-bg);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================*/
+
+/* 3 columns */
+@media (max-width: 1200px) {
+  .quizcard-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 2 columns */
+@media (max-width: 900px) {
+  .quizcard-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .quizCard-top {
+    height: 150px;
+  }
+}
+
+/* 1 column */
+@media (max-width: 576px) {
+  .quizcard-wrapper {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .quiz-card {
+    min-height: 200px;
+    border-radius: 14px;
+  }
+
+  .quizCard-top {
+    height: 140px;
+  }
+
+  .quizCard-bottom p span {
+    width: 32px;
+    height: 32px;
+  }
+
+  .quizCard-top > span:first-child,
+  .quizCard-top > span:nth-child(2) {
+    padding: 6px 8px;
+    font-size: 0.78rem;
+  }
+}
