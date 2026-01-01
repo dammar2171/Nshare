@@ -31,7 +31,7 @@ export default function Header() {
 .brand-blob,.user-btn{transition:transform .18s ease, box-shadow .18s ease}
 .brand-blob:hover{transform:translateY(-3px) scale(1.03)}
 .user-btn:hover{transform:translateY(-2px)}
-@media (max-width:576px){.navbar-nav .nav-link{padding:.35rem .5rem}}
+@media (max-width:576px){.navbar-nav .nav-link{padding:.35rem .5rem} .user-btn{border-radius:10px;padding:.45rem .0rem}}
 body{background:#08030a;font-family:Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial}
 body.light-theme{background:#f4f4f7;color:#111}
 body.light-theme .futuristic-header{background:rgba(255,255,255,0.85);border:1px solid rgba(0,0,0,0.06);backdrop-filter:blur(4px)}
@@ -161,8 +161,8 @@ body.light-theme .nav-link{color:#222}
           </nav>
         </div>
 
-        <div className="d-flex align-items-center gap-2">
-          <form className="search-box d-flex align-items-center me-2">
+        <div className="d-flex align-items-center gap-md-2">
+          <form className="search-box d-flex align-items-center me-2 ">
             <div className="input-group">
               <span
                 className="input-group-text"
@@ -177,7 +177,7 @@ body.light-theme .nav-link{color:#222}
               </span>
               <input
                 type="search"
-                className="form-control form-control-sm bg-transparent border-start-0"
+                className="form-control form-control-sm bg-transparent border-start-0 "
                 placeholder="Search docs, apps, commands..."
                 aria-label="Search"
                 aria-describedby="search-addon"
@@ -201,7 +201,7 @@ body.light-theme .nav-link{color:#222}
           <button
             onClick={handleSignin}
             type="button"
-            className="btn user-btn d-flex align-items-center gap-2"
+            className="btn user-btn d-flex align-items-center d-none d-md-block "
             aria-expanded="false"
             title="Account"
           >
@@ -221,7 +221,7 @@ body.light-theme .nav-link{color:#222}
           </button>
 
           <button
-            className="btn btn-link text-decoration-none d-lg-none ms-1"
+            className="btn btn-link text-decoration-none d-lg-none ms-md-1"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#mobileMenu"

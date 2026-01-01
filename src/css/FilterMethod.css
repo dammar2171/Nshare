@@ -1,10 +1,9 @@
-/* Wrapper row spacing */
+
 .filter-section {
   row-gap: 16px;
   margin-bottom: 10px;
 }
 
-/* Style for select menus */
 .filter-section .form-select {
   padding: 8px 12px;
   font-size: 14px;
@@ -14,25 +13,21 @@
   transition: 0.2s ease-in-out;
 }
 
-/* Hover effect */
 .filter-section .form-select:hover {
   border-color: #86b7fe;
 }
 
-/* Focus effect */
 .filter-section .form-select:focus {
   border-color: #0d6efd;
   box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
 }
 
-/* Label text */
  .filter-section .row p {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 4px;
 }
 
-/* Responsive — smaller screens stack better */
 @media (max-width: 768px) {
   .filter-section .col-3 {
     width: 50%;

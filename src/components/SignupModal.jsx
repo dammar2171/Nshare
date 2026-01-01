@@ -59,7 +59,7 @@ export default function SignupModal({ open = true, onClose }) {
   box-shadow: 0 6px 30px rgba(96,113,255,0.14);
 }
 .auth-card .card-body {
-  padding: 30px 36px;
+  padding: 0px 16px;
   color: #dfe9ff;
 }
 .auth-card h3 {
@@ -101,7 +101,7 @@ export default function SignupModal({ open = true, onClose }) {
 .btn-gradient {
   width: 100%;
   border-radius: 10px;
-  padding: 12px 18px;
+  padding: 8px 18px;
   font-weight: 700;
   font-size: 1rem;
   border: none;
@@ -113,7 +113,6 @@ export default function SignupModal({ open = true, onClose }) {
   display:flex;
   align-items:center;
   gap:12px;
-  margin: 18px 0;
   color: rgba(255,255,255,0.5);
 }
 .or-divider .line { flex:1;height:1px;background:rgba(255,255,255,0.03); }

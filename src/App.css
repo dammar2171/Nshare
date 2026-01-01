@@ -46,7 +46,7 @@
     width: 100%;
 }
 .brand-blob-footer{
-  margin-left: 12rem;
+  margin: 0 auto !important;
 }
 .footer-text{
   text-align: center;
@@ -137,7 +137,7 @@
   box-shadow: 0 0 0px rgba(0, 0, 0, 0);
 }
 
-/* Hover Effect */
+
 .pagination .page-link:hover {
   background: rgba(90, 90, 255, 0.2);
   border-color: rgba(120, 120, 255, 0.5);
@@ -145,7 +145,7 @@
   box-shadow: 0 0 8px rgba(120, 120, 255, 0.6);
 }
 
-/* Active Page */
+
 .pagination .page-item.active .page-link {
   background: rgba(120, 120, 255, 0.3);
   color: #fff;
@@ -153,7 +153,7 @@
   box-shadow: 0 0 10px rgba(150, 150, 255, 0.8);
 }
 
-/* Disable state */
+
 .pagination .page-item.disabled .page-link {
   opacity: 0.4;
   cursor: not-allowed;
@@ -162,6 +162,91 @@
 /* Remove default underline */
 .pagination .page-link:focus,
 .pagination .page-link:active {
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* offcanvas css */
+/* Offcanvas container */
+#mobileMenu {
+  width: 280px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+}
+
+/* Header */
+#mobileMenu .offcanvas-header {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 1.25rem;
+}
+
+#mobileMenu .offcanvas-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+
+#mobileMenu .offcanvas-body {
+  padding: 1.25rem;
+}
+
+
+#mobileMenu .text-muted {
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+
+#mobileMenu ul li a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+
+#mobileMenu ul li a:hover {
+  background-color: #f3f4f6;
+  color: #2563eb;
+  padding-left: 10px;
+}
+
+
+#mobileMenu svg {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+#mobileMenu hr {
+  margin: 1.25rem 0;
+  border-color: #e5e7eb;
+}
+
+#mobileMenu .form-control {
+  border-radius: 8px 0 0 8px;
+  border-color: #d1d5db;
+}
+
+#mobileMenu .form-control:focus {
+  box-shadow: none;
+  border-color: #2563eb;
+}
+
+#mobileMenu .btn-outline-secondary {
+  border-radius: 0 8px 8px 0;
+}
+
+#mobileMenu .btn-primary {
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0.75rem;
+}
+
+#mobileMenu .btn-close {
   outline: none;
   box-shadow: none;
 }

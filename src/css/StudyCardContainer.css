@@ -19,14 +19,13 @@
   --chip-bg: rgba(255,255,255,0.02);
 }
 
-/* responsive grid */
+
 .cards-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
-/* card */
 .cards-container .card {
   background: var(--card-bg);
   border-radius: 18px;
@@ -40,13 +39,13 @@
   transition: transform .18s ease, box-shadow .18s ease;
 }
 
-/* neon outline on hover */
+
 .card:hover{
   transform: translateY(-6px);
   box-shadow: 0 26px 60px rgba(0,0,0,0.7), 0 14px 40px rgba(96,113,255,0.08);
 }
 
-/* top image area */
+
 .card .card-top{
   position: relative;
   height: 180px;
@@ -59,7 +58,6 @@
   display:block;
 }
 
-/* small action button top-left */
 .card-action{
   position:absolute;
   top:14px;
@@ -77,7 +75,6 @@
 }
 .card-action:hover{ transform: translateY(-3px); }
 
-/* pill top-right */
 .card-pill{
   position:absolute;
   top:12px;
@@ -91,7 +88,6 @@
   box-shadow: 0 8px 26px rgba(99,120,255,0.12);
 }
 
-/* body */
 .card-body{
   padding: 20px 20px 26px;
   display:flex;
@@ -100,7 +96,6 @@
   flex:1;
 }
 
-/* title */
 .card-title{
   margin:0;
   color:#eaf0ff;
@@ -109,7 +104,6 @@
   font-weight:800;
 }
 
-/* description */
 .card-desc{
   color:var(--muted-2);
   font-size:0.98rem;
@@ -119,7 +113,6 @@
   text-overflow:ellipsis;
 }
 
-/* chips */
 .card-chips{
   display:flex;
   gap:10px;
@@ -136,7 +129,6 @@
   font-size:0.9rem;
 }
 
-/* author row */
 .card-author{
   display:flex;
   gap:12px;
@@ -156,7 +148,6 @@
 .author-info .author-name{ color: #dbe8ff; font-weight:700; font-size:0.95rem;}
 .author-info .author-sub{ color:var(--muted-2); font-size:0.85rem; }
 
-/* separator */
 .card-sep{
   border: none;
   height:1px;
@@ -164,7 +155,6 @@
   margin:8px 0;
 }
 
-/* footer row */
 .card-footer{
   display:flex;
   gap:12px;
@@ -172,7 +162,6 @@
   margin-top:auto;
 }
 
-/* rating box */
 .rating{
   display:flex;
   gap:10px;
@@ -187,7 +176,6 @@
 }
 .rating .star{ margin-right:4px; color: #f3c24b; }
 
-/* date box */
 .date{
   margin-left: auto;
   background: rgba(255,255,255,0.03);
@@ -197,20 +185,15 @@
   border:1px solid rgba(255,255,255,0.03);
 }
 
-/* RESPONSIVE */
-
-/* 3 columns for large laptops */
 @media (max-width:1300px){
   .cards-container { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* 2 columns tablets */
 @media (max-width:900px){
   .cards-container { grid-template-columns: repeat(2, 1fr); }
   .card { min-height: 480px; }
 }
 
-/* 1 column mobile */
 @media (max-width:576px){
   .cards-container { grid-template-columns: 1fr; }
   .card { min-height: 420px; border-radius: 16px; }

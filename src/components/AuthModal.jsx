@@ -14,7 +14,6 @@ export default function AuthModal({ open = true, onClose }) {
     setVisible(open);
   }, [open]);
 
-  
   useEffect(() => {
     const css = `
 /* base & fonts */
@@ -75,7 +74,7 @@ export default function AuthModal({ open = true, onClose }) {
 }
 .auth-card p.lead {
   text-align: center;
-  margin-bottom: 22px;
+  margin-bottom: 10px;
   color: rgba(255,255,255,0.55);
 }
 
@@ -125,7 +124,7 @@ export default function AuthModal({ open = true, onClose }) {
   display:flex;
   align-items:center;
   gap:12px;
-  margin: 20px 0;
+  margin: 5px 0;
   color: rgba(255,255,255,0.5);
 }
 .or-divider .line { flex:1;height:1px;background:rgba(255,255,255,0.03); }
@@ -152,7 +151,7 @@ export default function AuthModal({ open = true, onClose }) {
 /* footer links */
 .auth-footer {
   text-align:center;
-  margin-top: 18px;
+  margin-top: 5px;
   color: rgba(255,255,255,0.55);
 }
 .auth-footer a { color:#7ab6ff; font-weight:600; text-decoration:none; }
@@ -265,7 +264,7 @@ export default function AuthModal({ open = true, onClose }) {
             </div>
           </div>
 
-          <div className="mb-3">
+          <div className="mb-1">
             <button className="btn-gradient">Sign In</button>
           </div>
 

@@ -1,8 +1,10 @@
+import TopSectionNotice from "../components/Notice/TopSectionNotice";
+
 function Notice() {
   return (
-    <div>
-      <h3>notice page</h3>
-    </div>
+    <>
+    <TopSectionNotice/>
+    </>
   );
 }
 
