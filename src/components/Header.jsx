@@ -48,24 +48,17 @@ body.light-theme .nav-link{color:#222}
       document.head.removeChild(styleEl);
     };
   }, []);
-
-  // theme: "dark" | "light"
   const [theme, setTheme] = React.useState(() =>
     document.body.classList.contains("light-theme") ? "light" : "dark"
   );
-
-  // central place to apply CSS variable values for both themes
   const applyThemeVars = (t) => {
     const root = document.documentElement;
     if (t === "light") {
       root.style.setProperty("--glass-bg", "rgba(0,0,0,0.04)");
-      root.style.setProperty("--accent-1", "#6b46ff"); // slightly muted for light
+      root.style.setProperty("--accent-1", "#6b46ff"); 
       root.style.setProperty("--accent-2", "#00a7bf");
       root.style.setProperty("--text", "#0f1724");
-      // any other themeable variables you want:
-      // root.style.setProperty('--some-other-var','value')
     } else {
-      // dark (original)
       root.style.setProperty("--glass-bg", "rgba(255,255,255,0.04)");
       root.style.setProperty("--accent-1", "#7b61ff");
       root.style.setProperty("--accent-2", "#00e5ff");
@@ -73,17 +66,14 @@ body.light-theme .nav-link{color:#222}
     }
   };
 
-  // apply initial theme variables on mount / when theme state changes
   useEffect(() => {
     applyThemeVars(theme);
-    // ensure body class matches theme (keeps existing CSS that checks body.light-theme)
     if (theme === "light") document.body.classList.add("light-theme");
     else document.body.classList.remove("light-theme");
   }, [theme]);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
-    // NOTE: theme effect takes care of DOM changes (CSS vars and body class)
   };
 
   const handleSignin = () => {
