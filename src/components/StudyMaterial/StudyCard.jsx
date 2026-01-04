@@ -1,11 +1,16 @@
 import { FiExternalLink, FiUser, FiStar, FiCalendar } from "react-icons/fi";
 import "../../css/StudyCardContainer.css";
+import { useNavigate } from "react-router-dom";
 
 export default function StudyCard({ items }) {
+  const navigate = useNavigate();
+  const handleCard = (id) => {
+    navigate(`/study_detail/${id}`);
+  };
   return (
     <div className="cards-container">
       {items.map((it) => (
-        <article className="card" key={it.id}>
+        <article className="card" key={it.id} onClick={() => handleCard(it.id)}>
           <div className="card-top">
             <img src={it.image} alt={it.title} />
             <button className="card-action" aria-label="open">
