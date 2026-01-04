@@ -11,7 +11,7 @@ export default function StudyCard({ items }) {
             <button className="card-action" aria-label="open">
               <FiExternalLink />
             </button>
-            {it.topPill && <div className="card-pill">{it.topPill}</div>}
+            {it.top_pill && <div className="card-pill">{it.top_pill}</div>}
           </div>
 
           <div className="card-body">
@@ -31,7 +31,7 @@ export default function StudyCard({ items }) {
                 <FiUser />
               </div>
               <div className="author-info">
-                <div className="author-name">by {it.author}</div>
+                <div className="author-name">by {it.publisher}</div>
                 <div className="author-sub">{it.authorSub}</div>
               </div>
             </div>
@@ -42,12 +42,12 @@ export default function StudyCard({ items }) {
               <div className="rating">
                 <FiStar className="star" />
                 <div className="rating-value">
-                  {it.rating}{" "}
-                  <span className="rating-count">({it.ratingCount})</span>
+                  {it.rating}
+                  <span className="rating-count">({"10"})</span>
                 </div>
               </div>
               <div className="date">
-                <FiCalendar className="cal" /> {it.date}
+                <FiCalendar className="cal" /> {it.created_at.split("T")[0]}
               </div>
             </div>
           </div>

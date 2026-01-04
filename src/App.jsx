@@ -11,22 +11,25 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
 import BottomFooter from "./components/BottomFooter";
+import StoreContextProvider from "./store/Store";
 function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/study" element={<Study />} />
-        <Route path="/quiz" element={<Quiz />} />
-        <Route path="/notice" element={<Notice />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
-      <BackToTop />
-      <Footer />
-      <BottomFooter />
-    </Router>
+    <StoreContextProvider>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/study" element={<Study />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/notice" element={<Notice />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+        <BackToTop />
+        <Footer />
+        <BottomFooter />
+      </Router>
+    </StoreContextProvider>
   );
 }
 
