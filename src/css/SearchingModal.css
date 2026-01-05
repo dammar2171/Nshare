@@ -1,0 +1,87 @@
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.search-modal {
+  width: 90%;
+  max-width: 800px;
+  max-height: 85vh;
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-cards {
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.search-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.search-card:hover {
+  transform: translateY(-4px);
+}
+
+.search-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 12px;
+}
+
+.card-info h4 {
+  margin: 0;
+  font-size: 15px;
+  color: white;
+}
+
+.card-info p {
+  font-size: 13px;
+  color: var(--muted-2);
+  margin: 6px 0;
+}
+
+.pill {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: 999px;
+  background: var(--pill-bg);
+  color: var(--accent-1);
+}
+
+.no-result {
+  text-align: center;
+  color: var(--muted-2);
+  grid-column: 1 / -1;
+}
+
+.close-btn {
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  color: white;
+  cursor: pointer;
+}
