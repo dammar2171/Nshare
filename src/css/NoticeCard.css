@@ -136,6 +136,9 @@ font-size: 2rem;
     padding: 14px;
     gap: 16px;
   }
+  .topSectionNotice-container h1{
+    font-size: 1.4rem;
+  }
 
   .noticeCard {
     border-radius: 14px;

@@ -44,7 +44,7 @@ const StudyDetail = () => {
               <img src={image} alt={title} />
             </div>
           )}
-          <div className="d-flex justify-content-center gap-5 align-items-center">
+          <div className=" custom-detail-container d-flex justify-content-center gap-5 align-items-center">
             <div className="study-section">
               <h3>Description</h3>
               <p>{description}</p>

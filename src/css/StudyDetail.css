@@ -194,3 +194,17 @@
   line-height: 1.5;
 }
 
+@media(max-width : 576px){
+ .study-image img {
+  height: 200px;
+ } 
+ .study-header h1{
+  font-size: 1.1rem;
+ }
+ .custom-detail-container{
+  flex-direction: column;
+  justify-content: start !important;
+  align-items: start !important;
+  gap: 8px !important;
+ }
+}

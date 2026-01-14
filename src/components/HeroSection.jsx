@@ -22,7 +22,7 @@ function HeroSection() {
               </p>
               <button>Browse Study Material</button>
             </div>
-            <div className="d-flex gap-3 align-items-center justify-content-md-start stats mt-4">
+            <div className="d-flex gap-3 align-items-center justify-content-sm-center justify-content-md-start stats mt-4">
               <div className="d-flex flex-column mt-4">
                 <p>
                   <FaUserFriends /> <span className="number">63+</span>

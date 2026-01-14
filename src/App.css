@@ -103,7 +103,7 @@
 
 /* Pagination css */
 .pagination-fluid{
-   padding: 30px 0;
+  padding: 30px 0;
   background: linear-gradient(180deg, rgba(10,14,24,0.96), rgba(10,14,24,0.92));
   border-top: 1px solid rgba(255,255,255,0.04);
   color: #e8ecff;
@@ -158,12 +158,28 @@
   opacity: 0.4;
   cursor: not-allowed;
 }
-
 /* Remove default underline */
 .pagination .page-link:focus,
 .pagination .page-link:active {
   outline: none;
   box-shadow: none;
+}
+
+@media (max-width: 576px) {
+  .pagination-fluid{
+    padding:0;
+  }
+  .pagination-container{
+    padding:0;
+  }
+ .pagination{
+  flex-direction: column;
+  gap: 0.3rem;
+  justify-content: center;
+ }
+ .pagination .page-item{
+  text-align: center;
+}
 }
 
 

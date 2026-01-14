@@ -176,6 +176,9 @@
   .review-card > p:nth-of-type(2) {
     font-size: 0.94rem;
   }
+  .share-reviewBtn {
+    padding: 12px;
+  }
 }
 
 

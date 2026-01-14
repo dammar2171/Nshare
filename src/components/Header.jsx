@@ -31,7 +31,7 @@ export default function Header() {
 .brand-blob,.user-btn{transition:transform .18s ease, box-shadow .18s ease}
 .brand-blob:hover{transform:translateY(-3px) scale(1.03)}
 .user-btn:hover{transform:translateY(-2px)}
-@media (max-width:576px){.navbar-nav .nav-link{padding:.35rem .5rem} .user-btn{border-radius:10px;padding:.45rem .0rem}}
+@media (max-width:576px){.navbar-nav .nav-link{padding:.35rem .5rem} .user-btn{border-radius:10px;padding:.45rem .0rem} .futuristic-header{padding:0}.input-group>.form-control{width:fit-content}.btn{padding-left:0}}
 body{background:#08030a;font-family:Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial}
 body.light-theme{background:#f4f4f7;color:#111}
 body.light-theme .futuristic-header{background:rgba(255,255,255,0.85);border:1px solid rgba(0,0,0,0.06);backdrop-filter:blur(4px)}
@@ -55,7 +55,7 @@ body.light-theme .nav-link{color:#222}
     const root = document.documentElement;
     if (t === "light") {
       root.style.setProperty("--glass-bg", "rgba(0,0,0,0.04)");
-      root.style.setProperty("--accent-1", "#6b46ff"); 
+      root.style.setProperty("--accent-1", "#6b46ff");
       root.style.setProperty("--accent-2", "#00a7bf");
       root.style.setProperty("--text", "#0f1724");
     } else {
@@ -167,7 +167,7 @@ body.light-theme .nav-link{color:#222}
               </span>
               <input
                 type="search"
-                className="form-control form-control-sm bg-transparent border-start-0 "
+                className="form-control form-control-sm bg-transparent border-start-0 text-white"
                 placeholder="Search docs, apps, commands..."
                 aria-label="Search"
                 aria-describedby="search-addon"
@@ -248,28 +248,28 @@ body.light-theme .nav-link{color:#222}
           <p className="text-muted">Quick links</p>
           <ul className="list-unstyled">
             <li className="mb-2">
-              <a className="d-block py-2" href="#">
+              <NavLink className="d-block py-2" to="/">
                 <FiHome style={{ marginRight: 8 }} />
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="mb-2">
-              <a className="d-block py-2" href="#">
+              <NavLink className="d-block py-2" to="/study">
                 <FiBox style={{ marginRight: 8 }} />
                 Study Materials
-              </a>
+              </NavLink>
             </li>
             <li className="mb-2">
-              <a className="d-block py-2" href="#">
+              <NavLink className="d-block py-2" to="/quiz">
                 <FiBook style={{ marginRight: 8 }} />
                 MCQ Quiz
-              </a>
+              </NavLink>
             </li>
             <li className="mb-2">
-              <a className="d-block py-2" href="#">
+              <NavLink className="d-block py-2" to="/notice">
                 <FaRegBell style={{ marginRight: 8 }} />
                 Notice
-              </a>
+              </NavLink>
             </li>
           </ul>
 

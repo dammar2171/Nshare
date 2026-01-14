@@ -14,7 +14,7 @@
 
 .card-signin{
   
-  width: 800px;
+  max-width: 800px;
   padding: 4rem 4rem;
   background-color: #06b5d406;
   border-radius: 1rem;
@@ -91,10 +91,14 @@
 }
 
 
+@media (max-width: 992px) {
+  .signin-container h1 {
+    font-size: 1.9rem;
+  }
+}
 @media (max-width: 576px) {
   .card-signin{
-    width: 390px;
-    padding: 4rem 4rem;
+    padding: 1rem;
     background-color: #06b5d406;
     border-radius: 1rem;
     margin: 0 auto;
@@ -123,11 +127,6 @@
 }
 
 
-@media (max-width: 992px) {
-  .signin-container h1 {
-    font-size: 1.9rem;
-  }
-}
 
 
 .btn-cta:focus,
