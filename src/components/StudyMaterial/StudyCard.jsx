@@ -3,6 +3,8 @@ import "../../css/StudyCardContainer.css";
 import { useNavigate } from "react-router-dom";
 
 export default function StudyCard({ items }) {
+  console.log("Items:", items);
+
   const navigate = useNavigate();
   const handleCard = (id) => {
     navigate(`/study_detail/${id}`);
@@ -26,7 +28,7 @@ export default function StudyCard({ items }) {
             <div className="card-chips">
               {it.chips?.map((c, i) => (
                 <span className="chip" key={i}>
-                  {c}
+                  {c.replace(/["\[\]]/g, "")}
                 </span>
               ))}
             </div>

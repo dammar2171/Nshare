@@ -77,7 +77,7 @@ const StudyDetail = () => {
                 src={`http://localhost:5000${pdf_url}`}
                 title="Study PDF"
                 className="pdf-viewer"
-              />
+              />npm run dev
             </div>
           )}
         </div>

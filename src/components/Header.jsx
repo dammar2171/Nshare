@@ -49,7 +49,7 @@ body.light-theme .nav-link{color:#222}
     };
   }, []);
   const [theme, setTheme] = React.useState(() =>
-    document.body.classList.contains("light-theme") ? "light" : "dark"
+    document.body.classList.contains("light-theme") ? "light" : "dark",
   );
   const applyThemeVars = (t) => {
     const root = document.documentElement;
