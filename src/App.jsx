@@ -13,6 +13,7 @@ import BackToTop from "./components/BackToTop";
 import BottomFooter from "./components/BottomFooter";
 import StoreContextProvider from "./store/Store";
 import StudyDetail from "./pages/StudyDetail";
+import QuizDetail from "./pages/QuizDetail";
 function App() {
   return (
     <StoreContextProvider>
@@ -26,6 +27,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/study_detail/:id" element={<StudyDetail />} />
+          <Route path="/quiz_detail/:id" element={<QuizDetail />} />
         </Routes>
         <BackToTop />
         <Footer />
