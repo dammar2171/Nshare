@@ -7,7 +7,7 @@ function McqCard({ quizData }) {
         <div className="quiz-card" key={item.id}>
           <div className="quizCard-top">
             <span>{item.category}</span>
-            <span>{item.totalQuestion}MCQs</span>
+            <span>{item.questions.length}QN</span>
             <img src={item.image} alt="" />
           </div>
           <div className="quizCard-bottom">
