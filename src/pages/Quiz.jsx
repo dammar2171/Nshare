@@ -1,4 +1,5 @@
 import McqCardContainer from "../components/Mcq/McqCardContainer";
+import PaginationSection from "../components/Mcq/PaginationSection";
 import TopSectionQuiz from "../components/Mcq/TopSectionQuiz";
 
 function Quiz() {
@@ -6,6 +7,7 @@ function Quiz() {
     <>
       <TopSectionQuiz />
       <McqCardContainer />
+      <PaginationSection />
     </>
   );
 }
